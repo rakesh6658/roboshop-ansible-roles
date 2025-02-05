@@ -1,8 +1,8 @@
 - name: installing nodejs
   ansible.builtin.import_role:
     name: common
-    tasks_from: installing-nodejs.yaml
+    tasks_from: installing-nodejs
 - name: setting up app directory
   ansible.builtin.import_role:
     name: common
-    tasks_from: setup-app.yaml    
+    tasks_from: setup-app    
