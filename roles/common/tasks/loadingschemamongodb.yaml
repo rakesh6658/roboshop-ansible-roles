@@ -1,0 +1,2 @@
+- name: loading schema
+  ansible.builtin.shell: mongosh --host mongodb.joindevops.store  </app/schema/catalogue.js        
