@@ -5,7 +5,7 @@
 - name: Add the user 'roboshop' after validating
   when: out.rc!=0
   ansible.builtin.user:
-   name: roboshop   
+    name: roboshop   
 - name: checking app directory exists or not
   ansible.builtin.stat:
     path: /app
@@ -22,9 +22,9 @@
   ansible.builtin.get_url:
     url: "https://roboshop-builds.s3.amazonaws.com/{{component}}.zip"
     dest: "/tmp/{{component}}.zip"
-- name: "Unarchive {{catalogue}}.zip in app directory"
+- name: "Unarchive {{component}}.zip in app directory"
   ansible.builtin.unarchive:
-    src: "/tmp/{{catalogue}}.zip"
+    src: /tmp/{{component}}.zip
     dest: /app
     remote_src: yes  
   
