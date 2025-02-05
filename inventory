@@ -1,6 +1,6 @@
 [mongodb]
-mongodb.joindevops.online
+mongodb.joindevops.store
 [catalogue]
-catalogue.joindevops.online
+catalogue.joindevops.store
 [web]
-web.joindevops.online
+web.joindevops.store
