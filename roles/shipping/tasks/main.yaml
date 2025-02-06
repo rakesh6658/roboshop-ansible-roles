@@ -23,17 +23,17 @@
     name: common
     tasks_from: systemdsetup 
 - name: installing mysql
-    ansible.builtin.dnf:
-      name: mysql
-      state: installed      
-  - name: loading schemas
-    ansible.builtin.shell: "{{item}}"
-    loop:
-      - mysql -h mysql.joindevops.store -uroot -pRoboShop@1 < /app/db/schema.sql
-      - mysql -h mysql.joindevops.store -uroot -pRoboShop@1 < /app/db/app-user.sql
-      - mysql -h mysql.joindevops.store -uroot -pRoboShop@1 < /app/db/master-data.sql 
-  - name: restarting shipping
-    ansible.builtin.service:
-      name: shipping
-      state: restarted                 
+  ansible.builtin.dnf:
+    name: mysql
+    state: installed      
+- name: loading schemas
+  ansible.builtin.shell: "{{item}}"
+  loop:
+    - mysql -h mysql.joindevops.store -uroot -pRoboShop@1 < /app/db/schema.sql
+    - mysql -h mysql.joindevops.store -uroot -pRoboShop@1 < /app/db/app-user.sql
+    - mysql -h mysql.joindevops.store -uroot -pRoboShop@1 < /app/db/master-data.sql 
+- name: restarting shipping
+  ansible.builtin.service:
+    name: shipping
+    state: restarted                 
 
