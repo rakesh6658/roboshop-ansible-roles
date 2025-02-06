@@ -14,3 +14,9 @@ cart.joindevops.store
 mysql.joindevops.store
 [shipping]
 shipping.joindevops.store
+[rabbitmq]
+rabbitmq.joindevops.store
+[payment]
+payment.joindevops.store
+[dispatch]
+dispatch.joindevops.store
