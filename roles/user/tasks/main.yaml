@@ -8,8 +8,8 @@
     tasks_from: setup-app
 - name: installing dependencies
   ansible.builtin.shell: npm install
-    args:
-      chdir: /app   
+  args:
+    chdir: /app   
 - name: copying user.service and starting and enabling, deamon reload
   ansible.builtin.import_role:
     name: common
