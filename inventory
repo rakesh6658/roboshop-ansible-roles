@@ -12,3 +12,5 @@ user.joindevops.store
 cart.joindevops.store
 [mysql]
 mysql.joindevops.store
+[shipping]
+shipping.joindevops.store
